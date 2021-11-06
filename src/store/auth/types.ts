@@ -12,6 +12,5 @@ export interface LoginResponseDto{
 }
 
 export interface LoginParams{
-    email:string,
-    password:string
+    userCode:string,
 }

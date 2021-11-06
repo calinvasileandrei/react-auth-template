@@ -1,10 +1,18 @@
 import {AxiosResponse} from 'axios';
 import {UserModel} from 'models/user.model';
-import {appAxios} from 'api/interceptor/auth.interceptor';
 
+const fakeResponse = () => Promise.resolve({
+    data: {
+        email:'email',
+        _id:'1',
+        accountStatus:"Active",
+        roles:['User']
+    },
+    status:200
+} as AxiosResponse<UserModel>);
 
 const fetchCurrentUsers = async (): Promise<UserModel | undefined> =>{
-    const response:AxiosResponse<UserModel> = await appAxios.get(`/user/findCurrent`)
+    const response:AxiosResponse<UserModel> = await fakeResponse() //appAxios.get(`/user/findCurrent`)
     if(response && response.data){
         return response.data;
     }

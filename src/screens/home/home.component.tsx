@@ -1,18 +1,12 @@
 import React from 'react';
-import {Box} from '@chakra-ui/react';
-import {HeaderComponent} from 'shared/components/header.component.tsx/header.component';
+import SimplePage from 'shared/components/simplePage/simplePage.component';
 
 interface HomeProps{
 }
 
 export const Home = (props: HomeProps) => {
     return (
-    <Box>
-        <HeaderComponent/>
-        <Box>
-            Home
-        </Box>
-    </Box>
+        <SimplePage header={{pageName:'Home'}}></SimplePage>
     )
 };
 

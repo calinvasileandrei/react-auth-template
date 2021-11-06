@@ -7,9 +7,10 @@ import {AppRoutes} from 'navigation/routes';
 function App() {
   return (
       <Switch>
-        <Route {...AppRoutes.LOGIN}/>
-        <Route {...AppRoutes.REGISTER}/>
-        <PrivateRoute {...AppRoutes.HOME}/>
+          <Route {...AppRoutes.TEST}/>
+          <Route {...AppRoutes.LOGIN}/>
+          <Route {...AppRoutes.REGISTER}/>
+          <PrivateRoute {...AppRoutes.HOME}/>
       </Switch>
   );
 }
